@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the esd_views feature.
+ */
+
+include_once 'esd_views.features.inc';
