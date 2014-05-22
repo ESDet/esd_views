@@ -82,7 +82,6 @@ function esd_views_views_default_views() {
 
   /* Display: Blog */
   $handler = $view->new_display('page', 'Blog', 'page_2');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['path'] = 'blog';
   $handler->display->display_options['menu']['type'] = 'normal';
@@ -94,13 +93,11 @@ function esd_views_views_default_views() {
   /* Display: Blog by author */
   $handler = $view->new_display('page', 'Blog by author', 'page');
   $handler->display->display_options['enabled'] = FALSE;
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'blog/author/%';
 
   /* Display: Blog by tag */
   $handler = $view->new_display('page', 'Blog by tag', 'page_1');
   $handler->display->display_options['enabled'] = FALSE;
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID (with depth) */
   $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
@@ -127,7 +124,6 @@ function esd_views_views_default_views() {
 
   /* Display: Blog Block */
   $handler = $view->new_display('block', 'Blog Block', 'block_1');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -354,7 +350,6 @@ function esd_views_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'home';
   $translatables['frontpage_slideshow'] = array(
     t('Master'),
@@ -466,7 +461,6 @@ function esd_views_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'media';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Media Archive';
@@ -522,7 +516,7 @@ function esd_views_views_default_views() {
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Introduction';
-  $handler->display->display_options['header']['area']['content'] = '<div><img alt="" src="/files/dz7a7151weeklyupdates.jpg" /></div><p>We email <strong>Weekly Education News & Policy Updates</strong> to partners in our work to create excellent schools for every Detroit student. This is an archive of those weekly updates.</p>';
+  $handler->display->display_options['header']['area']['content'] = '<div><img src="https://www.excellentschoolsdetroit.org/sites/www.excellentschoolsdetroit.org/files/extra03_2.jpg" /></div><p>We email <strong>Weekly Education News & Policy Updates</strong> to partners in our work to create excellent schools for every Detroit student. This is an archive of those weekly updates.</p>';
   $handler->display->display_options['header']['area']['format'] = 'unfiltered_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -553,7 +547,6 @@ function esd_views_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'weekly-updates';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Weekly Updates';
@@ -577,7 +570,7 @@ function esd_views_views_default_views() {
     t('next ›'),
     t('last »'),
     t('Introduction'),
-    t('<div><img alt="" src="/files/dz7a7151weeklyupdates.jpg" /></div><p>We email <strong>Weekly Education News & Policy Updates</strong> to partners in our work to create excellent schools for every Detroit student. This is an archive of those weekly updates.</p>'),
+    t('<div><img src="https://www.excellentschoolsdetroit.org/sites/www.excellentschoolsdetroit.org/files/extra03_2.jpg" /></div><p>We email <strong>Weekly Education News & Policy Updates</strong> to partners in our work to create excellent schools for every Detroit student. This is an archive of those weekly updates.</p>'),
     t('Page'),
   );
   $export['weekly_email_updates'] = $view;
