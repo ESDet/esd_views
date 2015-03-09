@@ -173,6 +173,47 @@ function esd_views_views_default_views() {
   );
   $handler->display->display_options['fields']['field_blog_date']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Early Childhood tag */
+  $handler = $view->new_display('page', 'Early Childhood tag', 'page_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Early Learning';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<div><img alt="" class="image-580wNh" height="245" src="/files/styles/580wNh/public/early_childhood.jpg?itok=SXXmqSni" width="580" /></div>
+<p>Excellent Schools Detroit believes that learning happens from day one. In fact, early learning provides children with the foundational skills they need to be successful throughout life.</p><p>Every year, roughly 10,000 Detroit kids enter school for the first time, many of them into nonprofit or private early learning programs, state-funded Great Start Readiness or federally funded Head Start, and others directly into kindergarten at elementary schools.&nbsp;</p><p>For parents, the decision of where to send their child for her first formal education experience can set her on a path full of opportunities, or one of academic frustrations and dead-ends.&nbsp; To make the decision more complicated, with only a few exceptions, Detroit&#39;s early learning programs and elementary schools do not talk and have no formal relationship with each other, or across their own sectors. To say it another way, right now all these people and organizations that are responsible for preparing and educating our 3-8 year olds don&#39;t regularly or systematically work together.</p><p>Excellent Schools Detroit is working to encourage a change so that the systems actually do work together. Download our flyer (PDF below) to find out about our most current early learning initiatives.</p><p>The Early Learning team is busy on multiple projects to improve the quality of Early Learning and Care programs in Detroit and its immediate surroundings. More information about each can be found below.</p>
+
+<div><img alt="" class="image-580wNh" height="245" src="/files/styles/580wNh/public/early_childhood.jpg?itok=SXXmqSni" width="580" /></div>';
+  $handler->display->display_options['header']['area']['format'] = 'unfiltered_html';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published or admin */
+  $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
+  $handler->display->display_options['filters']['status_extra']['table'] = 'node';
+  $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
+  $handler->display->display_options['filters']['status_extra']['group'] = 0;
+  $handler->display->display_options['filters']['status_extra']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'blog_entry' => 'blog_entry',
+  );
+  /* Filter criterion: Content: Tags: (field_blog_tags) */
+  $handler->display->display_options['filters']['field_blog_tags_tid']['id'] = 'field_blog_tags_tid';
+  $handler->display->display_options['filters']['field_blog_tags_tid']['table'] = 'field_data_field_blog_tags';
+  $handler->display->display_options['filters']['field_blog_tags_tid']['field'] = 'field_blog_tags_tid';
+  $handler->display->display_options['filters']['field_blog_tags_tid']['value'] = array(
+    138 => '138',
+  );
+  $handler->display->display_options['filters']['field_blog_tags_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_blog_tags_tid']['vocabulary'] = 'blog_tags';
+  $handler->display->display_options['path'] = 'el/overview-new';
   $translatables['blog'] = array(
     t('Master'),
     t('Blog'),
@@ -196,6 +237,12 @@ function esd_views_views_default_views() {
     t('Blog Block'),
     t('More'),
     t('[field_blog_date] - [title]'),
+    t('Early Childhood tag'),
+    t('Early Learning'),
+    t('<div><img alt="" class="image-580wNh" height="245" src="/files/styles/580wNh/public/early_childhood.jpg?itok=SXXmqSni" width="580" /></div>
+<p>Excellent Schools Detroit believes that learning happens from day one. In fact, early learning provides children with the foundational skills they need to be successful throughout life.</p><p>Every year, roughly 10,000 Detroit kids enter school for the first time, many of them into nonprofit or private early learning programs, state-funded Great Start Readiness or federally funded Head Start, and others directly into kindergarten at elementary schools.&nbsp;</p><p>For parents, the decision of where to send their child for her first formal education experience can set her on a path full of opportunities, or one of academic frustrations and dead-ends.&nbsp; To make the decision more complicated, with only a few exceptions, Detroit&#39;s early learning programs and elementary schools do not talk and have no formal relationship with each other, or across their own sectors. To say it another way, right now all these people and organizations that are responsible for preparing and educating our 3-8 year olds don&#39;t regularly or systematically work together.</p><p>Excellent Schools Detroit is working to encourage a change so that the systems actually do work together. Download our flyer (PDF below) to find out about our most current early learning initiatives.</p><p>The Early Learning team is busy on multiple projects to improve the quality of Early Learning and Care programs in Detroit and its immediate surroundings. More information about each can be found below.</p>
+
+<div><img alt="" class="image-580wNh" height="245" src="/files/styles/580wNh/public/early_childhood.jpg?itok=SXXmqSni" width="580" /></div>'),
   );
   $export['blog'] = $view;
 
